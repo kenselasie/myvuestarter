@@ -4,7 +4,17 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
+import Snotify from 'vue-snotify'
+
+import 'vue-snotify/styles/material.css'
+import 'bootstrap/dist/css/bootstrap.css'
+
+
 Vue.config.productionTip = false
+
+Vue.use(Snotify)
+Vue.use(require('vue-moment'))
+
 
 new Vue({
   router,

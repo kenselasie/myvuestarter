@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>This is my Vue Starter</h1>
+    <p>
+     <button @click="snotify()" class="btn btn-primary">Test Snotify</button>
+    </p>
+    <p>
+     <button @click="modal()" class="btn btn-info">Test Modal</button>
+    </p>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+ 
+ methods: {
+   snotify() {
+     this.$snotify.info("Snotify is perfect!", 'Testing!!', {
+        timeout: 2000,
+        showProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        position: "centerTop"
+    })
+   },
+
+   modal() {
+    //  bootbox.alert("Your message here…")
+   }
+ }
 }
 </script>
