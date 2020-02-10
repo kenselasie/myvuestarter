@@ -1,12 +1,20 @@
 <template>
   <div class="home">
-    <h1>This is my Vue Starter</h1>
-    <p>
-     <button @click="snotify()" class="btn btn-primary">Test Snotify</button>
-    </p>
-    <p>
-     <button @click="modal()" class="btn btn-info">Test Modal</button>
-    </p>
+
+    <div class="container">
+    <h1 >This is my Vue Starter</h1>
+      <div class="row justify-content-center">
+        <div class="col-sm-4">
+          <button @click="snotify()" class="btn btn-primary">Test Snotify</button>
+        </div>
+        <div class="col-sm-4">
+          <button @click="modal()" class="btn btn-info">Test Modal</button>  
+        </div>
+        <div class="col-sm-4">
+          <button @click="something()" class="btn btn-success">Test Something</button>  
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
