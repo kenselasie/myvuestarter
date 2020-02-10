@@ -3,6 +3,8 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import VModal from 'vue-js-modal'
+
 
 import Snotify from 'vue-snotify'
 
@@ -14,6 +16,7 @@ Vue.config.productionTip = false
 
 Vue.use(Snotify)
 Vue.use(require('vue-moment'))
+Vue.use(VModal)
 
 
 new Vue({
