@@ -1,14 +1,13 @@
 <template>
 <body id="page-top">
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bgnav fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light bgnav fixed-top" id="mainNav">
     <div class="container-fluid">
-      <img class="navbar-brand m-0" height="100px" src="../assets/img/utkala_logo1.webp" />
+      <img class="navbar-brand m-0" height="70px" src="" alt="Logo" />
       <a
         class="navbar-brand"
         href="#page-top"
-        style="font-size:20px; color: orange;"
-      >UTKALA GHANA ASSOCIATION</a>
+      >Sample Landing</a>
       <button
         class="navbar-toggler navbar-toggler-right"
         type="button"
@@ -23,22 +22,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#about">About Us</a>
+            <a class="nav-link" href="#motivation">Motivation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#services">Founding Members</a>
+            <a class="nav-link" href="#components">My Components</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Contact Us</a>
-          </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#contact">Events</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#news">News/Announcements</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">News/Announcements</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="#contact">Contact Me</a>
           </li>
         </ul>
       </div>
@@ -50,25 +46,19 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <transition
-            appear
-            name="custom-classes-transition"
-            enter-active-class="animated slideInUp slow"
-          >
-            <h1 class="text-white font-weight-bold">Welcome to Utkala Ghana Association</h1>
+          <transition appear name="custom-classes-transition" enter-active-class="animated slideInUp slow">
+            <h1 class="text-success">Welcome to Ken's Vue Starter</h1>
           </transition>
           <hr class="divider my-4" />
         </div>
-        <div class="col-lg-8 align-self-baseline" style="color: orange;">
-          <h2 class="text-white-75 font-weight-light mb-4">In Unity, We Prosper</h2>
+        <div class="col-lg-8 align-self-baseline">
+          <h2 class="text-white font-weight-light mb-4">Are you ready?</h2>
           <div class="mb-4">
-            <h3>Support Our Community Help us build our temple in Accra! Any donation amount will go a long way</h3>
+            <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam a dolorum possimus dolorem cum facilis eius asperiores blanditiis quae labore vero nostrum alias, aliquid vitae repudiandae sed necessitatiulpa explicabo nam tempora amet doloremque dignissimos fugit pariatur reiciendis. Ea, rem voluptates.</p>
           </div>
           <button
-            @click="donate"
-            class="btn btn-lg py-3 px-5"
-            style="background-color: #ED932F;"
-          >DONATE</button>
+            class="btn btn-lg py-3 px-5 btn-primary"
+          >Read More</button>
         </div>
       </div>
     </div>
@@ -76,15 +66,15 @@
 
   <!-- About Section -->
   <!-- <transition appear name="custom-classes-transition" enter-active-class="animated bounceInDown"> -->
-  <section class="page-section bg-dark" id="about">
-    <div class="container">
+  <section class="page-section bg-dark" id="motivation">
+    <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0">About UAG</h2>
+          <h2 class="text-white mt-0">Motivation</h2>
           <hr class="divider light my-4" />
-          <h3
-            class="text-white-50 mb-4"
-          >We are a small group belonging to the eastern state of Odisha in India who are here in Ghana for different reasons but have a common bond that gives us strength to uphold the unique Odia culture.</h3>
+          <p class="text-white-50 mb-4">
+            An inspiration popped up to work on components thats can just be called and used all over and over again, all i had to do was just clone this repo, change the remote repository url to a project im working on and booom!!, im ready to go..
+          </p>
           <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Read more</a>
         </div>
       </div>
@@ -93,9 +83,9 @@
   <!-- </transition> -->
 
   <!-- Services Section -->
-  <section class="page-section" id="services">
+  <section class="page-section" id="components">
     <div class="container">
-      <h2 class="text-center mt-0">At Your Service</h2>
+      <h2 class="text-center mt-0">Components</h2>
       <hr class="divider my-4" />
       <div class="row">
         <div class="col-lg-3 col-md-6 text-center">
@@ -172,11 +162,11 @@
       <div class="row">
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
           <i class="ri-phone-line ri-4x mb-3 text-muted"></i>
-          <div>+233 026 431 4342</div>
+          <div>+233 50 122 5642</div>
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="ri-mail-line ri-4x mb-3 text-muted"></i>
-          <a class="d-block" href="mailto:kennedyadzoyi@gmail.com">info@uaghana.com</a>
+          <a class="d-block" href="mailto:kennedyadzoyi@gmail.com">kennedyadzoyi98@gmail.com</a>
         </div>
       </div>
     </div>
@@ -185,7 +175,7 @@
   <!-- Footer -->
   <footer class="bg-light py-5">
     <div class="container">
-      <div class="small text-center text-muted">&copy; 2019 by Utkala Association Ghana</div>
+      <div class="small text-center text-muted">&copy; 2020 ken_selasie</div>
     </div>
   </footer>
 </body>
@@ -209,8 +199,8 @@ header.masthead {
   padding-bottom: calc(10rem - 72px);
   background: linear-gradient(
       to bottom,
-      rgba(212, 211, 211, 0.082) 0%,
-      rgba(75, 75, 75, 0.521) 100%
+      rgba(32, 32, 32, 0.164) 0%,
+      rgba(75, 75, 75, 0.616) 100%
     ),
     url("../assets/img/picc2.jpg");
   background-position: center;
@@ -219,9 +209,6 @@ header.masthead {
   background-size: cover;
 }
 
-header.masthead h1 {
-  font-size: 2.25rem;
-}
 
 @media (min-width: 992px) {
   header.masthead {
@@ -254,7 +241,7 @@ hr.divider {
   border-color: #28a745;
 }
 .bgnav {
-  background-color: #09403a;
+  background-color: #e4eeed85;
 }
 
 .nav-link {

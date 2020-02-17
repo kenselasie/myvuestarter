@@ -6,12 +6,6 @@
 </template>
 <script>
 export default {
-  created() {
-  //  setTimeout(() => {
-    //  window.onload = function(){
-      document.getElementById('app').style.opacity = 0;
-      // }
-  //  }, 5000)
- }
+
 }
 </script>

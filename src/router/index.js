@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import store from '../store'
+import SideNav from '@/components/SideNav.vue'
 
 
 Vue.use(VueRouter)
@@ -11,6 +12,22 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/sidenav',
+    component: SideNav,
+    // redirect: "/dashboard",
+    children: [
+      {
+        path: 'dashboard',
+        name: 'dashboard',
+        component: () => import('@/views/Dashboard.vue'),      
+        // meta: {
+        //   requiresAuth: true
+        // }  
+        
+      }      
+    ]
   },
   {
     path: '/about',
