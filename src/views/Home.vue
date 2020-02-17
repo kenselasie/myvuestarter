@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-  </div>
       <h1 class="text-center">This is my Vue Starter</h1>
       <div class="row">
           <div class="row justify-content-center">
@@ -15,11 +14,10 @@
             </div>
           </div>
         </div>
-      </div>
 
     <ConfirmModal :action="snotify" modalname="testModal" msg="This is a test modal"/>
+  </div>
 
-    </div>
 </template>
 
 <script>
