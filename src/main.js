@@ -8,11 +8,13 @@ import VueScrollTo from 'vue-scrollto'
 
 
 
+
 import Snotify from 'vue-snotify'
 
 import 'vue-snotify/styles/material.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'remixicon/fonts/remixicon.css'
+
 
 
 

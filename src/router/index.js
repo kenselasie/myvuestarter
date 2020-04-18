@@ -14,6 +14,16 @@ const routes = [
     component: Home
   },
   {
+    path: '/vueside',
+    name: 'side',
+    component: () => import('@/components/VueSidebarMenu.vue'),  
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: () => import('@/components/SignupComponents/SignupComponent.vue'),  
+  },
+  {
     path: '/sidenav',
     component: SideNav,
     // redirect: "/dashboard",
