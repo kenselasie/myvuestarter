@@ -127,7 +127,7 @@
         <div class="col-lg-8 text-center">
           <h2 class="mt-0">Let's Get In Touch!</h2>
           <hr class="divider my-4" />
-          <p class="text-muted mb-5">Get in touch with Utkala Ghana Association today!</p>
+          <p class="text-muted mb-5">Get in touch with Ken today!</p>
         </div>
       </div>
       <div class="row justify-content-center">
