@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
+  <div class="container">
       <h1 class="text-center">This is my Vue Starter</h1>
-      <div class="row">
-          <div class="row justify-content-center">
-            <div class="col-sm-4">
+      <div class="row justify-content-between">
+            <div class="col-xs-3">
               <button @click="snotify()" class="btn btn-primary">Test Snotify</button>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xs-3">
               <button @click="modal()" class="btn btn-info">Test Modal</button>  
             </div>
-            <div class="col-sm-4">
+            <div class="col-xs-3">
               <button @click="something()" class="btn btn-success">Test Something</button>  
             </div>
-          </div>
+            <div class="col-xs-3">
+              <button @click="pushNotifcation()" class="btn btn-danger">Push Notification</button>  
+            </div>
         </div>
 
     <ConfirmModal :action="snotify" modalname="testModal" msg="This is a test modal"/>
@@ -43,7 +44,28 @@ export default {
 
    modal() {
     this.$modal.show('testModal')
-   }
+   },
+
+  pushNotifcation() {
+    if (!Notification) {
+        alert('Hello aasdsddsds!'); 
+        return;
+      }
+
+      if (Notification.permission !== "granted")
+        Notification.requestPermission();
+
+      var notification = new Notification('Madakoraa', {
+        icon: '../assets/img/madakoraa/144x144.png',
+        body: "This is a testing of the push notification!",
+      });
+
+      notification.onclick = function () {
+      window.open("https://twitter.com/mehedih_");      
+    };
+  }
+  
+
  },
 
  
