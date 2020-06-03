@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import store from '../store'
 import SideNav from '@/components/SideNav.vue'
-
+import {nestedRoutes} from './nestedRoutes'
 
 Vue.use(VueRouter)
 
@@ -35,20 +35,15 @@ const routes = [
     component: () => import('@/components/BlogPost.vue'),  
   },
   {
-    path: '/sidenav',
+    path: '/snakegame',
+    name: 'snakegame',
+    component: () => import('@/views/SnakeGame.vue'),  
+  },
+  {
+    path: '/nestedviews',
     component: SideNav,
     // redirect: "/dashboard",
-    children: [
-      {
-        path: 'dashboard',
-        name: 'dashboard',
-        component: () => import('@/views/Dashboard.vue'),      
-        // meta: {
-        //   requiresAuth: true
-        // }  
-        
-      }      
-    ]
+    children: [...nestedRoutes]
   },
   {
     path: '/about',
