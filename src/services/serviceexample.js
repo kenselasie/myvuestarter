@@ -3,7 +3,15 @@ import http from "../Base";
 import notificationsService from '@/services/notifications.service'
 
 export default {
-
+  getRequestApi() {
+    return httpHeader.get('/getrequest/')
+      .then(({ data }) => {
+        return Promise.resolve(data)
+      })
+      .catch((err) => {
+        return Promise.reject(err)
+      })
+  },
   // starting a patient visit
   getAllPatients(e) {
     http().get('/users/getallpatients')
@@ -69,41 +77,7 @@ export default {
         return false
       })
   },
-  ////////////////////////////////////////
-
-  searchPatients(e, name) {
-    // TODO: backend
-  },
-
-  // startNewVisit(e, params) {
-  //   // console.log(params);
-  //   let loader = e.$loading.show({
-  //     canCancel: true,
-  //     onCancel: e.onCancel
-  //   });
-  //   http().post('/visits/startvisit', params)
-  //     .then(res => {
-  //       let msg = `${e.name} has started your hospital visit. She is attending to you`
-  //       notificationsService.sendNotification(params['szpatientid'], msg)
-  //         .catch(err => {
-  //           console.log('Did not notify')
-  //         })
-  //       console.log(res.data.szvisitid)
-  //       e.$store.commit('visitation/setVisitId', `${res.data.szvisitid}`)
-  //       e.$store.commit('visitation/setPatientId', params.szpatientid)
-  //       e.$store.commit('visitation/setPatientName', params.szpatientname)
-  //       e.$store.commit('visitation/setPatientDOB', params.szdob)
-  //       e.$store.commit('visitation/setPatientGender', params.sz_gender)
-  //       // e.visitStarted = true
-  //       // e.$router.push('/nurse/patient')
-  //     })
-  //     .catch(err => {
-  //       e.$snotify.error('Oops! Something went wrong. Please check you internet connection')
-  //     })
-  //     .finally(() => {
-  //       loader.hide()
-  //     })
-  // },
+ 
 
   continueVisit(e, params) {
     // console.log(params);
