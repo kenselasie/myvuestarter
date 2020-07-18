@@ -6,7 +6,7 @@
 
 <script>
 let lastRenderTime = 0
-const SNAKE_SPEED = 3 //change this back to 2 that was the change
+const SNAKE_SPEED = 2
 
 function main(currentTime) {
   window.requestAnimationFrame(main);
